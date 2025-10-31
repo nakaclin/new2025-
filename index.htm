@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>色の持つ印象と心理テスト</title>
+  <style>
+    body {
+      font-family: "Hiragino Sans", "Noto Sans JP", sans-serif;
+      background-color: #ffffff;
+      color: #333333;
+      margin: 0;
+      padding: 0;
+      line-height: 1.8;
+    }
+
+    header {
+      background-color: #f5f5f5;
+      text-align: center;
+      padding: 3rem 1rem;
+      border-bottom: 1px solid #ddd;
+    }
+
+    header h1 {
+      font-size: 2.2rem;
+      margin-bottom: 0.5rem;
+      letter-spacing: 2px;
+      color: #222;
+    }
+
+    header p {
+      font-size: 1rem;
+      color: #666;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 3rem auto;
+      padding: 0 1.5rem;
+    }
+
+    section {
+      margin-bottom: 3rem;
+    }
+
+    h2 {
+      font-size: 1.4rem;
+      color: #222;
+      border-left: 4px solid #555;
+      padding-left: 10px;
+      margin-bottom: 1.5rem;
+    }
+
+    .color-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .color-card {
+      background-color: #fafafa;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 1.5rem;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .color-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+
+    .color-sample {
+      width: 100%;
+      height: 80px;
+      border-radius: 6px;
+      margin-bottom: 1rem;
+    }
+
+    .color-name {
+      font-size: 1.1rem;
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+      color: #333;
+    }
+
+    /* ボタンスタイル */
+    .test-section {
+      text-align: center;
+      background-color: #f8f8f8;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+
+    .test-section p {
+      margin-bottom: 1.2rem;
+      color: #444;
+    }
+
+    button {
+      background-color: #333;
+      color: #fff;
+      border: none;
+      padding: 0.8rem 1.4rem;
+      margin: 0.5rem;
+      border-radius: 6px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #555;
+    }
+
+    .result {
+      margin-top: 1.5rem;
+      font-weight: bold;
+      color: #555;
+      min-height: 2em;
+    }
+
+    /* オーナー紹介 */
+    .owner-section {
+      background-color: #f8fdf8;
+      border: 1px solid #c8e6c9;
+      border-radius: 12px;
+      padding: 2rem;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    }
+
+    .owner-section h3 {
+      color: #2e7d32;
+      margin-top: 0;
+      font-size: 1.3rem;
+    }
+
+    .owner-section p {
+      color: #2f4f2f;
+    }
+
+    .owner-highlight {
+      background-color: #e8f5e9;
+      border-left: 5px solid #81c784;
+      padding: 1rem;
+      border-radius: 6px;
+      margin-top: 1rem;
+    }
+
+    footer {
+      background-color: #f5f5f5;
+      text-align: center;
+      padding: 2rem;
+      border-top: 1px solid #ddd;
+      font-size: 0.9rem;
+      color: #666;
+    }
+
+    /* カラーパレット */
+    .red { background-color: #e57373; }
+    .orange { background-color: #ffb74d; }
+    .yellow { background-color: #fff176; }
+    .green { background-color: #81c784; }
+    .blue { background-color: #64b5f6; }
+    .purple { background-color: #ba68c8; }
+    .gray { background-color: #bdbdbd; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>色の持つ印象と心理テスト</h1>
+    <p>Color and Emotion — あなたの心に響く色とは</p>
+  </header>
+
+  <main>
+    <section>
+      <h2>色と心の関係</h2>
+      <p>
+        色は、私たちの感情や印象に大きな影響を与える力を持っています。  
+        明るい色は前向きな気分を生み、落ち着いた色は安心感や安定をもたらします。  
+        ここでは、代表的な色が与える印象について紹介します。
+      </p>
+    </section>
+
+    <section>
+      <h2>代表的な色の印象</h2>
+      <div class="color-list">
+        <div class="color-card">
+          <div class="color-sample red"></div>
+          <div class="color-name">赤（Red）</div>
+          <p>情熱・活力・エネルギーを象徴する色。積極性や勇気を引き出します。</p>
+        </div>
+
+        <div class="color-card">
+          <div class="color-sample orange"></div>
+          <div class="color-name">オレンジ（Orange）</div>
+          <p>親しみやすさ・温かさ・社交性を表す色。人とのつながりを深めます。</p>
+        </div>
+
+        <div class="color-card">
+          <div class="color-sample yellow"></div>
+          <div class="color-name">黄（Yellow）</div>
+          <p>明るさ・好奇心・創造性の象徴。気持ちを前向きにしてくれる色です。</p>
+        </div>
+
+        <div class="color-card">
+          <div class="color-sample green"></div>
+          <div class="color-name">緑（Green）</div>
+          <p>安らぎ・調和・成長を表す色。心を落ち着かせ、バランスを保ちます。</p>
+        </div>
+
+        <div class="color-card">
+          <div class="color-sample blue"></div>
+          <div class="color-name">青（Blue）</div>
+          <p>冷静・誠実・信頼の色。集中力を高め、安心感を与えます。</p>
+        </div>
+
+        <div class="color-card">
+          <div class="color-sample purple"></div>
+          <div class="color-name">紫（Purple）</div>
+          <p>高貴・神秘・感性を表す色。直感や創造的な思考を刺激します。</p>
+        </div>
+
+        <div class="color-card">
+          <div class="color-sample gray"></div>
+          <div class="color-name">グレー（Gray）</div>
+          <p>洗練・中立・落ち着きを表す色。静けさと大人の品格を感じさせます。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 心理テスト -->
+    <section class="test-section">
+      <h2>🧠 心理テスト</h2>
+      <p>今のあなたに近い時間帯を選んでください。</p>
+      <button onclick="showResult('morning')">あさ</button>
+      <button onclick="showResult('noon')">ひる</button>
+      <button onclick="showResult('evening')">ゆう</button>
+      <div id="result" class="result"></div>
+    </section>
+
+    <!-- オーナー紹介 -->
+    <section class="owner-section">
+      <h3>🌿 オーナー紹介</h3>
+      <p><strong>選んだ色：</strong> みどり色（Green）</p>
+      <p><strong>趣味：</strong> ガーデニング</p>
+
+      <div class="owner-highlight">
+        <p>
+          「みどり色」は、<strong>安らぎ・調和・自然とのつながり</strong>を象徴する色です。  
+          この色を選ぶオーナーは、穏やかで落ち着いた雰囲気を持ち、  
+          人や植物と丁寧に向き合う優しさを感じさせます。
+        </p>
+        <p>
+          ガーデニングを愛する姿からは、<strong>成長を見守る温かさ</strong>や、  
+          <strong>自然のリズムを大切にする心</strong>が伝わります。  
+          季節の変化を受け入れながら、自分自身も静かに成長していくような、  
+          調和と優しさに満ちた印象です。
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © 2025 色の持つ印象と心理テスト | Designed by ChatGPT
+  </footer>
+
+  <script>
+    function showResult(time) {
+      let resultText = "";
+      if (time === "morning") {
+        resultText = "🌅 あさを選んだあなたは、希望と前向きなエネルギーに満ちています。新しいことを始めるのに最適なタイミングです。";
+      } else if (time === "noon") {
+        resultText = "☀️ ひるを選んだあなたは、安定した心の状態にあります。自分を信じて、今に集中できるときです。";
+      } else if (time === "evening") {
+        resultText = "🌇 ゆうを選んだあなたは、今日一日を静かに振り返る穏やかな気持ちです。自分を労り、休息を大切にしましょう。";
+      }
+      document.getElementById("result").innerText = resultText;
+    }
+  </script>
+</body>
+</html>
